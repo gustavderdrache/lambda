@@ -1,0 +1,12 @@
+# SYSTEM REQUIREMENTS
+
+You'll need [SWI Prolog](http://www.swi-prolog.org), as this project uses a
+number of SWI-specific features (namely using `op/3` in module export lists).
+
+# RUNNING
+
+Just this:
+
+```sh
+swipl -s main.pro
+```
