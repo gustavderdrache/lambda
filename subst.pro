@@ -1,6 +1,6 @@
 :- module(subst, [ subst/4, alistsub/3 ]).
 
-:- use_module('util.pro').
+:- use_module(util).
 
 %%%
 % Substitution rules

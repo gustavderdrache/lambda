@@ -3,7 +3,7 @@
                    , (:=)/2
                    ]).
 
-:- use_module('term.pro', [term/1]).
+:- use_module(term, [term/1]).
 
 :- dynamic(bound/2).
 

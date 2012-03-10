@@ -1,6 +1,8 @@
-:- use_module('environ.pro').
-:- use_module('interact.pro').
-:- use_module('lex.pro').
+user:prolog_file_type(pro, prolog).
+
+:- use_module(environ).
+:- use_module(interact).
+:- use_module(lex).
 
 bind_defaults :-
     % ZERO := λf.λx.x

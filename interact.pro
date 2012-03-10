@@ -1,9 +1,9 @@
 :- module(interact, [ op(1, fx, eval), eval/1, pprint/1 ]).
 
-:- use_module('environ.pro').
-:- use_module('alist.pro').
-:- use_module('eval.pro').
-:- use_module('subst.pro').
+:- use_module(environ).
+:- use_module(alist).
+:- use_module(eval).
+:- use_module(subst).
 
 % interaction code (friendlier toplevel stuff)
 :- op(1, fx, eval).

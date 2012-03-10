@@ -2,8 +2,8 @@
 
 :- module(eval, [ evaluate/2 ]).
 
-:- use_module('term.pro').
-:- use_module('subst.pro').
+:- use_module(term).
+:- use_module(subst).
 
 % helper rule
 reducible(apply(fun(_, _), _)).

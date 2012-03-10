@@ -1,3 +1,5 @@
+user:prolog_file_type(pro, prolog).
+
 :- use_module('eval.pro').
 
 :- begin_tests(evaluation).

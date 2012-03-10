@@ -1,6 +1,6 @@
 :- module(alist, [ alistref/3, alistmember/2 ]).
 
-:- use_module('util.pro').
+:- use_module(util).
 
 % is alist?
 alist([]).
