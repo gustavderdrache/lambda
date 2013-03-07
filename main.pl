@@ -1,5 +1,3 @@
-user:prolog_file_type(pro, prolog).
-
 :- use_module(environ).
 :- use_module(interact).
 :- use_module(lex).
@@ -29,7 +27,26 @@ bind_defaults :-
     % AND := λp.λq.p q p
     and := fun(p, fun(q, apply(apply(p, q), p))).
 
-loop :- peek_char(Ch), char_type(Ch, end_of_file), nl, halt.
-loop :- ignore((readline(Expr), eval Expr)), loop.
+loop :-
+    read_line_to_codes(user_input, Codes),
+    (
+        Codes = end_of_file
+    ->
+        true
+    ;
+        run_phrase(Codes),
+        loop
+    ).
 
-:- bind_defaults, loop.
+run_phrase(Phrase) :-
+    (
+        phrase(lambda(Expr), Phrase)
+    ->
+        eval(Expr)
+    ;
+        write('Couldn\'t make sense of input...'), nl
+    ).
+
+main :-
+    bind_defaults,
+    loop.

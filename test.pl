@@ -1,6 +1,4 @@
-user:prolog_file_type(pro, prolog).
-
-:- use_module('eval.pro').
+:- use_module(eval).
 
 :- begin_tests(evaluation).
 
@@ -46,7 +44,7 @@ apply(f, apply(fun(x, x), y)) reduces_to apply(f, y).
 
 test(eval, [forall(Term reduces_to Expected)]) :-
     evaluate(Term, Result),
-    Result == Expected.
+    Result = Expected.
 
 :- end_tests(evaluation).
 
