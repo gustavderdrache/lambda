@@ -1,4 +1,4 @@
-:- module(lex, [ lambda/3, readline/1 ]).
+:- module(lex, [ lambda/3 ]).
 
 name(Name) -->
     name_first(Ch),
@@ -51,7 +51,3 @@ lambda(apply(Fun, Arg)) -->
 
 lambda(Name) -->
     name(Name).
-
-readline(Term) :-
-    read_line_to_codes(user_input, Codes),
-    phrase(lambda(Term), Codes).
